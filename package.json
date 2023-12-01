@@ -1,0 +1,12 @@
+{
+  "name": "tt-auctions",
+  "version": "1.0.0",
+  "description": "Semester Project 2 at Noroff. We are to build an auction site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
