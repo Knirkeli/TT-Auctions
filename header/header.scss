@@ -1,60 +1,59 @@
-$header-color: #1abc9c;
-$image-size: 70px;
-$octagon-size: 100px;
-$border-size: 25px;
+// $header-color: #bc1a22;
+// $image-size: 70px;
+// $octagon-size: 100px;
+// $border-size: 25px;
 
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
+// header {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: start;
+//   align-items: start;
 
-  h1 {
-    margin-bottom: 0.5rem;
-  }
+//   h1 {
+//     margin-bottom: 0.5rem;
+//   }
 
-  h2 {
-    margin-bottom: 1rem;
-  }
+//   h2 {
+//     margin-bottom: 1rem;
+//   }
 
-  .octagon {
-    width: $octagon-size;
-    height: $octagon-size;
-    background: $header-color;
-    position: relative;
-    overflow: hidden;
-    transform: rotate(45deg);
+//   .octagon {
+//     width: $octagon-size;
+//     height: $octagon-size;
+//     background: $header-color;
+//     position: relative;
+//     overflow: hidden;
+//     transform: rotate(45deg);
 
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      border-width: $border-size;
-      border-style: solid;
-      border-color: $header-color transparent transparent;
-      width: $octagon-size / 2 - $border-size;
-      height: 0;
-    }
+//     &:before, &:after {
+//       content: "";
+//       position: absolute;
+//       border-width: $border-size;
+//       border-style: solid;
+//       border-color: $header-color transparent transparent;
+//       width: calc(#{$octagon-size} / 2 - #{$border-size});
+//       height: 0;
+//     }
 
-    &:before {
-      top: 0;
-      left: 0;
-      border-bottom-width: $border-size;
-    }
+//     &:before {
+//       top: 0;
+//       left: 0;
+//       border-bottom-width: $border-size;
+//     }
 
-    &:after {
-      bottom: 0;
-      left: 0;
-      border-top-width: $border-size;
-    }
+//     &:after {
+//       bottom: 0;
+//       left: 0;
+//       border-top-width: $border-size;
+//     }
 
-    img {
-      transform: rotate(-45deg);
-      position: absolute;
-      width: $image-size;
-      height: $image-size;
-      left: calc(($octagon-size - $image-size) / 2);
-      top: calc(($octagon-size - $image-size) / 2);
-    }
-  }
-}
+//     img {
+//       transform: rotate(-45deg);
+//       position: absolute;
+//       width: $image-size;
+//       height: $image-size;
+//       left: calc((#{$octagon-size} - #{$image-size}) / 2);
+//       top: calc((#{$octagon-size} - #{$image-size}) / 2);
+//     }
+//   }
+// }

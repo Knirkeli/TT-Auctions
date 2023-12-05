@@ -13,7 +13,7 @@ header h2 {
 header .octagon {
   width: 100px;
   height: 100px;
-  background: #1abc9c;
+  background: #bc1a22;
   position: relative;
   overflow: hidden;
   transform: rotate(45deg);
@@ -23,8 +23,8 @@ header .octagon:before, header .octagon:after {
   position: absolute;
   border-width: 25px;
   border-style: solid;
-  border-color: #1abc9c transparent transparent;
-  width: 25px;
+  border-color: #bc1a22 transparent transparent;
+  width: calc(100px / 2 - 25px);
   height: 0;
 }
 header .octagon:before {
@@ -42,8 +42,8 @@ header .octagon img {
   position: absolute;
   width: 70px;
   height: 70px;
-  left: 15px;
-  top: 15px;
+  left: calc((100px - 70px) / 2);
+  top: calc((100px - 70px) / 2);
 }
 
 /*# sourceMappingURL=style.css.map */
