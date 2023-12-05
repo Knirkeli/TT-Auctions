@@ -1,0 +1,22 @@
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+}
+
+.modal-dialog {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    box-sizing: border-box;
+}
+
+.signinup-modal {
+    background: linear-gradient(rgba(12, 5, 11, 0.8), rgba(10, 1, 9, 0.8));
+    color: white; /* Set text color to white */
+    font-family: 'Algerian', sans-serif; /* Set font to Algerian */
+    box-shadow: 0 0 10px rgba(3, 3, 3, 3);
+    backdrop-filter: blur(5px);
+}
