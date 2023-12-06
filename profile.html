@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/style.css"/>
+    <link rel="stylesheet" href="header/header.css"/>
+    <link rel="stylesheet" href="signup/signup.css"/>
+    <script type="module" src="signup/modal.mjs"></script>
+    <script type="module" src="signup/signup.mjs"></script>
+    <script type="module" src="loginout/loginmodal.mjs"></script>
+    <script type="module" src="loginout/login.mjs"></script>
+    <script type="module" src="loginout/logout.mjs"></script>
+    <script type="module" src="loginout/logoutmodal.mjs"></script>
+    <script type="module" src="header/navitems.mjs"></script>
+    <title>TT-auctions-Home</title>
+  </head>
+  <body>    
+    <header class="d-flex flex-column justify-content-start align-items-start">
+      <h1 class="mb-2">Your Title Here</h1>
+      <h2 class="mb-4">Your Subtitle Here</h2>
+      <div class="octagon">
+        <img src="header/img/Dice2.jpg" alt="Placeholder profile image" />
+      </div>
+    </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px;">
+      <div class="container-fluid justify-content-between">
+        <a class="navbar-brand" href="#">Listings</a>
+        <a id="log-in-nav" class="navbar-brand" href="#">Log In</a>
+        <a id="sign-up-nav" class="navbar-brand" href="#">Sign Up</a>
+      </div>
+    </nav>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="card border rounded" style="width: 80vw; height: 60vh;">
+          <div class="card-header">
+            Profile
+          </div>
+          <div class="card-body">
+            <img src="profile/img/Dice2.jpg" alt="Profile Picture" style="width: 150px; height: 150px;">
+            <p class="card-text">DM Dragonhoard</p>
+          </div>
+        </div>
+      </div>
+    
+  </body>
+</html>

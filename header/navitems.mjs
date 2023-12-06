@@ -11,7 +11,7 @@ if (checkAccessToken()) {
 
     const profileNav = document.createElement('a');
     profileNav.className = 'navbar-brand';
-    profileNav.href = '#';
+    profileNav.href = 'profile.html';
     profileNav.textContent = 'Profile';
 
     const bidsNav = document.createElement('a');
