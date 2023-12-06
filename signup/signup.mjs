@@ -1,25 +1,43 @@
-import { createSignUpModal } from './modal.mjs';
-import { auctionEndpoint } from './api.mjs';
+import { auctionEndpoint } from '../api/api.mjs';
+import { createLoginModal } from '../loginout/loginmodal.mjs';
 
-document.addEventListener('DOMContentLoaded', () => {
-    const signUpButton = document.querySelector('#sign-up-nav');
+export async function submitForm(event) {
+    console.log('Form submitted');
+    event.preventDefault();
+    const form = event.target;
+    const name = form.querySelector('#name');
+    const email = form.querySelector('#email');
+    const password = form.querySelector('#password');
+    const profilePicture = form.querySelector('#profile-picture');
 
-    signUpButton.addEventListener('click', async (event) => {
-        event.preventDefault();
+    // Create an object to hold the form data
+    const formData = {
+        name: name.value,
+        email: email.value,
+        password: password.value,
+        avatar: profilePicture.value
+    };
 
-        const formData = createSignUpModal();
-
-        if (formData !== null) {
-            // If the form data is valid, send it to the API
-            const response = await fetch(`${auctionEndpoint}/auth/register`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-
-            // ... handle the response ...
-        }
+    // If the form data is valid, send it to the API
+    const response = await fetch(`${auctionEndpoint}/auth/register`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
     });
-});
+    console.log('API call made');
+
+    if (response.ok) {
+        // Display a success message
+        const successMessage = document.createElement('div');
+        successMessage.textContent = 'User successfully created';
+        form.appendChild(successMessage);
+
+        // After 5 seconds, remove the signup modal and display the login modal
+        setTimeout(() => {
+            form.remove();
+            createLoginModal();
+        }, 5000);
+    }
+}

@@ -1,7 +1,10 @@
+import { submitForm } from './signup.mjs';
+
 document.addEventListener('DOMContentLoaded', () => {
     const signUpButton = document.querySelector('#sign-up-nav');
   
     signUpButton.addEventListener('click', (event) => {
+        console.log('Sign-up button clicked'); 
         event.preventDefault();
         const modal = document.createElement('div');
         modal.classList.add('modal');
@@ -20,42 +23,43 @@ document.addEventListener('DOMContentLoaded', () => {
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                        <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                        <div id="nameError" class="text-danger"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                        <div id="emailError" class="text-danger"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                        <div id="passwordError" class="text-danger"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="repeat-password">Repeat Password</label>
-                        <input type="password" class="form-control" id="repeat-password" name="repeat-password" required>
-                        <div id="repeatPasswordError" class="text-danger"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="profile-picture">Profile Picture URL</label>
-                        <input type="url" class="form-control" id="profile-picture" name="profile-picture" required>
-                        <div id="profilePictureError" class="text-danger"></div>
-                    </div>
+                        <form id="myForm" onsubmit="console.log('Form submitted')">
+                            <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                            <div id="nameError" class="text-danger"></div>
+                            </div>
+                        
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div id="emailError" class="text-danger"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                                <div id="passwordError" class="text-danger"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="repeat-password">Repeat Password</label>
+                                <input type="password" class="form-control" id="repeat-password" name="repeat-password" required>
+                                <div id="repeatPasswordError" class="text-danger"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profile-picture">Profile Picture URL</label>
+                                <input type="url" class="form-control" id="profile-picture" name="profile-picture" required>
+                                <div id="profilePictureError" class="text-danger"></div>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-between">
+                                <button type="button" class="btn btn-secondary">Log in</button>
+                                <button type="submit" id="createButton" class="btn btn-primary">Create</button>
+                            </div>
                         </form>
                     </div>
-                    <div class="modal-footer d-flex justify-content-between">
-                        <button type="button" class="btn btn-secondary">Log in</button>
-                        <button type="button" class="btn btn-primary">Create</button>
-                    </div>
+
                 </div>
             </div>
         `;
@@ -68,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
         const form = modal.querySelector('form');
+        form.addEventListener('submit', submitForm);
         const name = form.querySelector('#name');
         const email = form.querySelector('#email');
         const password = form.querySelector('#password');
@@ -82,36 +87,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const createButton = modal.querySelector('.btn.btn-primary');
         createButton.addEventListener('click', (event) => {
-            event.preventDefault();
-
+            console.log('Create button clicked');
+            let isValid = true;
+        
             if (!/^[A-Z][a-z]{2,}$/.test(name.value)) {
                 nameError.innerText = 'Name must start with an uppercase letter and be more than 3 letters long.';
+                isValid = false;
             } else {
                 nameError.innerText = '';
             }
-
+        
             if (!/^[\w.-]+@stud\.noroff\.no$/.test(email.value)) {
                 emailError.innerText = 'Email must be a stud.noroff.no email.';
+                isValid = false;
             } else {
                 emailError.innerText = '';
             }
-
+        
             if (!/^(?=.*\d).{8,}$/.test(password.value)) {
                 passwordError.innerText = 'Password must have at least 8 characters and at least one number.';
+                isValid = false;
             } else {
                 passwordError.innerText = '';
             }
-
-            if (!/^https?:\/\/.*\.jpg$/.test(profilePicture.value)) {
-                profilePictureError.innerText = 'Profile picture URL must be a link to a .jpg image.';
+        
+            if (!/^https?:\/\/.*\.jpg|jpeg$/.test(profilePicture.value)) {
+                profilePictureError.innerText = 'Profile picture URL must be a link to a .jpg or .jpeg image.';
+                isValid = false;
             } else {
                 profilePictureError.innerText = '';
             }
-
+        
             if (password.value !== repeatPassword.value) {
                 repeatPasswordError.innerText = 'Password does not match.';
+                isValid = false;
             } else {
                 repeatPasswordError.innerText = '';
+            }
+        
+            if (!isValid) {
+                event.preventDefault();
             }
         });
 
