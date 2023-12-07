@@ -67,6 +67,7 @@ export function createLoginModal() {
             const data = await response.json();
             localStorage.setItem('accessToken', data.accessToken);
             modal.remove();
+            location.reload();
         } catch (error) {
             console.error('Login failed:', error);
         }

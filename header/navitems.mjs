@@ -16,13 +16,14 @@ if (checkAccessToken()) {
 
     const bidsNav = document.createElement('a');
     bidsNav.className = 'navbar-brand';
-    bidsNav.href = '#';
+    bidsNav.href = 'bids.html';
     bidsNav.textContent = 'Bids';
 
     const logoutNav = document.createElement('a');
     logoutNav.className = 'navbar-brand';
     logoutNav.href = '#';
     logoutNav.textContent = 'Log Out';
+    logoutNav.id = 'logout';
 
     nav.appendChild(profileNav);
     nav.appendChild(bidsNav);
