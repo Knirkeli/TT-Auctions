@@ -65,9 +65,10 @@ export function createLoginModal() {
             }
     
             const data = await response.json();
+            console.log(data); // Log the server response
             localStorage.setItem('accessToken', data.accessToken);
             modal.remove();
-            location.reload();
+            // location.reload();
         } catch (error) {
             console.error('Login failed:', error);
         }
