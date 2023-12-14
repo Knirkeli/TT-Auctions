@@ -34,10 +34,10 @@ export async function submitForm(event) {
         successMessage.textContent = 'User successfully created';
         form.appendChild(successMessage);
 
-        // After 5 seconds, remove the signup modal and display the login modal
+
         setTimeout(() => {
             form.remove();
             createLoginModal();
-        }, 5000);
+        }, 3000);
     }
 }

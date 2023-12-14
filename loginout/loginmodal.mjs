@@ -38,11 +38,6 @@ export function createLoginModal() {
         </div>
     `;
 
-    const closeButton = modal.querySelector('.close');
-    closeButton.addEventListener('click', () => {
-        modal.remove();
-    });
-
     const loginButton = modal.querySelector('.btn-secondary');
     loginButton.addEventListener('click', async () => {
         const emailInput = modal.querySelector('#email');
@@ -67,6 +62,10 @@ export function createLoginModal() {
             const data = await response.json();
             console.log(data); // Log the server response
             localStorage.setItem('accessToken', data.accessToken);
+
+            // Store the user's name in local storage
+            localStorage.setItem('username', data.name);
+
             modal.remove();
             location.reload();
         } catch (error) {
