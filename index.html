@@ -20,6 +20,7 @@
     <script type="module" src="Lander/displaylatest.mjs"></script>
     <script type="module" src="Lander/endingsoon.mjs"></script>
     <script type="module" src="Lander/countdown.mjs"></script>
+    <script type="module" src="Lander/search.mjs"></script>
     <title>TT-auctions-Home</title>
   </head>
   <body>
@@ -34,12 +35,20 @@
     </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px;">
       <div class="container-fluid justify-content-between">
-        <a class="navbar-brand" href="listings.html">Listings</a>
+        <a class="navbar-brand" href="listings.html">My Listings</a>
         <a id="log-in-nav" class="navbar-brand" href="#">Log In</a>
         <a id="sign-up-nav" class="navbar-brand" href="#">Sign Up</a>
       </div>
     </nav>
-    <div class="container">
+    <div id="search_container" class="container text-center mt-5 mb-5">
+      <div class="input-group">
+        <input id="search_input" type="text" class="form-control" placeholder="Search">
+        <div class="input-group-append">
+          <button id="search_button" class="btn btn-outline-secondary" type="button">Search</button>
+        </div>
+      </div>
+    </div>
+    <div id="listings_container" class="container">
       <div class="card mt-5 mb-5">
         <div class="card-header text-center">Newly Added Items</div>
         <div id="new-listings" class="card-body">
