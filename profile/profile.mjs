@@ -1,7 +1,7 @@
 import { auctionEndpoint } from '../api/api.mjs';
 
 async function getUserProfile() {
-  const username = localStorage.getItem('username');
+  const username = localStorage.getItem('name');
   const response = await fetch(`${auctionEndpoint}/profiles/${username}`, {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -13,7 +13,7 @@ async function getUserProfile() {
 }
 
 async function getUserListings() {
-  const username = localStorage.getItem('username');
+  const username = localStorage.getItem('name');
   const response = await fetch(`${auctionEndpoint}/profiles/${username}/listings`, {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -24,7 +24,7 @@ async function getUserListings() {
 }
 
 async function getUserBids() {
-  const username = localStorage.getItem('username');
+  const username = localStorage.getItem('name');
   const response = await fetch(`${auctionEndpoint}/profiles/${username}/bids`, {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('accessToken')}`

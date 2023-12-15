@@ -36,22 +36,36 @@
 
 import { auctionEndpoint } from '../api/api.mjs';
 
-export async function fetchListings() {
-    try {
-        console.log('About to fetch listings from:', `${auctionEndpoint}/listings`);
+export async function fetchListings(limit = 100, offset = 0) {
+    const url = new URL(`${auctionEndpoint}/listings`);
+    url.searchParams.append('limit', limit);
+    url.searchParams.append('offset', offset);
+    url.searchParams.append('sort', 'created');
+    url.searchParams.append('sortOrder', 'desc');
 
-        const response = await fetch(`${auctionEndpoint}/listings`);
-        console.log('Fetch response:', response);
+    const response = await fetch(url);
+    let listings = await response.json();
 
-        const listings = await response.json();
+    // Filter out listings with titles that contain any of the words in the wordsToFilterOut array
+    const wordsToFilterOut = [
+      "test",
+      "tester",
+      "hei",
+      "title",
+      "hello",
+    ];
 
-        // Log the fetched listings
-        console.log('Fetched listings:', listings);
+    listings = listings.filter(
+      listing =>
+        !wordsToFilterOut.some(word =>
+          listing.title.toLowerCase().includes(word.toLowerCase())
+        )
+    );
 
-        return listings;
-    } catch (error) {
-        console.error('An error occurred:', error);
-    }
+    // Log the fetched listings
+    console.log('Fetched listings:', listings);
+
+    return listings;
 }
   
 // async function displayLatestListings() {

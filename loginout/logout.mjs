@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
   confirmLogoutButton.addEventListener("click", () => {
     console.log("Logout button clicked");
     localStorage.removeItem('accessToken');
+    localStorage.removeItem('name'); // Remove the username from local storage
     modal.style.display = "none";
     location.reload(); // This line reloads the page
   });
