@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/style.css"/>
     <link rel="stylesheet" href="header/header.css"/>
-    <link rel="stylesheet" href="signup/signup.css"/>
+    <!-- <link rel="stylesheet" href="signup/signup.css"/>
     <script type="module" src="signup/modal.mjs"></script>
     <script type="module" src="signup/signup.mjs"></script>
     <script type="module" src="loginout/loginmodal.mjs"></script>
     <script type="module" src="loginout/login.mjs"></script>
     <script type="module" src="loginout/logout.mjs"></script>
-    <script type="module" src="loginout/logoutmodal.mjs"></script>
-    <script type="module" src="header/navitems.mjs"></script>
+    <script type="module" src="loginout/logoutmodal.mjs"></script> -->
+    <!-- <script type="module" src="header/navitems.mjs"></script> -->
     <script type="module" src="mylistings/create.mjs"></script>
-    <script type="module" src="profile/gold.mjs"></script>
+    <!-- <script type="module" src="profile/gold.mjs"></script> -->
     <title>TT-auctions-My_listings</title>
   </head>
   <body>
@@ -57,6 +57,10 @@
                 <label for="listingImage">Image URL</label>
                 <input type="text" class="form-control" id="listingImage" placeholder="Enter image URL">
               </div>
+              <div class="form-group mb-3">
+                <label for="listingEndsAt">Ends At</label>
+                <input type="datetime-local" class="form-control" id="listingEndsAt">
+            </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
