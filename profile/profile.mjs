@@ -14,7 +14,7 @@ async function getUserProfile() {
 
 async function getUserListings() {
   const username = localStorage.getItem('name');
-  const response = await fetch(`${auctionEndpoint}/profiles/${username}/listings`, {
+  const response = await fetch(`${auctionEndpoint}/profiles/${username}/listings?_bids=true`, {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
     }
@@ -25,7 +25,7 @@ async function getUserListings() {
 
 async function getUserBids() {
   const username = localStorage.getItem('name');
-  const response = await fetch(`${auctionEndpoint}/profiles/${username}/bids`, {
+  const response = await fetch(`${auctionEndpoint}/profiles/${username}/bids?_listings=true`, {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
     }

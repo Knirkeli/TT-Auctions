@@ -1,9 +1,9 @@
-import { fetchListings } from './fetchposts.mjs';
+import { fetchAllListings } from './fetchposts.mjs';
 
 export async function displayEndingSoonListings() {
     console.log('displayEndingSoonListings called'); // Log when the function is called
 
-    const listings = await fetchListings();
+    const listings = await fetchAllListings();
     console.log('Fetched listings:', listings); // Log the fetched listings
 
     // Sort the listings by end time, ascending
