@@ -22,11 +22,10 @@
     <script type="module" src="lander/endingsoon.mjs"></script>
     <script type="module" src="lander/countdown.mjs"></script>
     <script type="module" src="lander/search.mjs"></script>
+    <script type="module" src="mylistings/single.mjs"></script>
     <title>TT-auctions-Home</title>
   </head>
-  <body>
-
-    
+  <body>    
     <header class="d-flex flex-column justify-content-start align-items-start">
       <a href="index.html" class="text-decoration-none text-body">
         <h1 class="mb-2">Tt-Auctions</h1>
@@ -42,7 +41,7 @@
     </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px;">
       <div class="container-fluid justify-content-between">
-        <a class="navbar-brand" href="listings.html">My Listings</a>
+        <a class="navbar-brand" href="listings.html">Listings</a>
         <a id="log-in-nav" class="navbar-brand" href="#">Log In</a>
         <a id="sign-up-nav" class="navbar-brand" href="#">Sign Up</a>
       </div>
@@ -55,6 +54,7 @@
         </div>
       </div>
     </div>
+
     <div id="listings_container" class="container">
       <div class="card mt-5 mb-5">
         <div class="card-header text-center">Newly Added Items</div>
@@ -173,5 +173,24 @@
         &copy;Knirkefri Design
       </div>
     </footer>
+    <!-- <div class="modal fade" id="listing-modal" tabindex="-1" role="dialog" aria-labelledby="listingModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-primary custom-modal-size">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-title"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="modal-tags"></p>
+            <img id="modal-media" src="" alt="Listing image" class="img-fluid">
+            <p id="modal-description"></p>
+            <p id="modal-sAt"></p>
+            <p id="modal-_bids"></p>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </body>
 </html>
