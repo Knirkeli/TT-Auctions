@@ -10,7 +10,7 @@ header {
   header h2 {
     margin-bottom: 1rem;
   }
-  header .octagon {
+  /* header .octagon {
     width: 100px;
     height: 100px;
     background: #bc1a22;
@@ -44,4 +44,4 @@ header {
     height: 70px;
     left: calc((100px - 70px) / 2);
     top: calc((100px - 70px) / 2);
-  }
+  } */

@@ -32,7 +32,21 @@
       </a>
       <a href="profile.html" class="text-decoration-none text-body">
         <div class="octagon">
-          <img src="header/img/Dice2.jpg" alt="Placeholder profile image" />
+          <svg preserveAspectRatio="none" viewbox="0 0 100 100" width="20%">
+            <defs>
+              <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
+                <image xlink:href="https://i.pinimg.com/originals/e4/ae/05/e4ae053eaf232b4f90e23b38b43d7faf.jpg" x="0" y="0" width="100" height="100" preserveAspectRatio="none" transform="rotate(-45 50 50)" />
+              </pattern>
+            </defs>
+            <path d="M25,2
+                     L75,2
+                     L98,25
+                     L98,75
+                     L75,98
+                     L25,98
+                     L2,75
+                     L2,25z" fill="url(#img1)" stroke-width="1" stroke="black" transform="rotate(45 50 50)"></path>
+          </svg>
         </div>
       </a>
     </header>
@@ -101,7 +115,7 @@
         &copy;Knirkefri Design
       </div>
     </footer>
-    <div class="modal fade" id="listing-modal" tabindex="-1" role="dialog" aria-labelledby="listingModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="listing-modal" tabindex="-1" role="dialog" aria-labelledby="listingModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -119,6 +133,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
