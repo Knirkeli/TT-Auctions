@@ -31,3 +31,6 @@
     height: 250px; /* Set the height */
     object-fit: cover; /* Ensure that the content scales to fill the card while maintaining its aspect ratio */
 }
+nav {
+    height: 50px
+}

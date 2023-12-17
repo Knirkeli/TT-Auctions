@@ -23,21 +23,24 @@
     <script type="module" src="mylistings/displaylisting.mjs"></script>
     <title>TT-auctions-Home</title>
   </head>
-  <body class="d-flex flex-column" style="min-height: 100vh;">
-    <header class="d-flex flex-column justify-content-start align-items-start bg-primary text-white p-3">
-      <a href="index.html" class="text-decoration-none text-body">
-        <h1 class="mb-2">Tt-Auctions</h1>
+  <body class="d-flex flex-column">
+    <header class="d-flex flex-row justify-content-between align-items-end">
+      <div>
+        <a href="index.html" class="text-decoration-none text-body">
+          <h1 class="mb-4 mt-3 ml-4 fs-1">Tt-Auctions</h1>
       </a>
       <a href="index.html" class="text-decoration-none text-body">
-        <h2 class="mb-4">Roll the dice</h2>
+          <h2 class="mb-4 ml-5 fs-2">Roll the dice</h2>
       </a>
-      <a href="profile.html" class="text-decoration-none text-body">
+      </div>
+      <a href="profile.html" class="text-decoration-none text-body mb-2 mt-2 mr-1">
+        <div class="rotate">
         <div class="octagon">
-          <svg preserveAspectRatio="none" viewbox="0 0 100 100" width="20%">
+          <svg preserveAspectRatio="none" viewbox="0 0 100 100" width="115.2px">
             <defs>
-              <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
-                <image xlink:href="https://i.pinimg.com/originals/e4/ae/05/e4ae053eaf232b4f90e23b38b43d7faf.jpg" x="0" y="0" width="100" height="100" preserveAspectRatio="none" transform="rotate(-45 50 50)" />
-              </pattern>
+                <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="https://i.pinimg.com/originals/e4/ae/05/e4ae053eaf232b4f90e23b38b43d7faf.jpg" x="0" y="0" width="100" height="100" preserveAspectRatio="none" />
+                </pattern>
             </defs>
             <path d="M25,2
                      L75,2
@@ -46,18 +49,21 @@
                      L75,98
                      L25,98
                      L2,75
-                     L2,25z" fill="url(#img1)" stroke-width="1" stroke="black" transform="rotate(45 50 50)"></path>
-          </svg>
+                     L2,25z" fill="url(#img1)" stroke-width="1" stroke="black"></path>
+        </svg>
         </div>
+      </div>
       </a>
     </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid justify-content-between">
-        <a class="navbar-brand" href="listings.html">Listings</a>
-        <a id="log-in-nav" class="navbar-brand" href="#">Log In</a>
-        <a id="sign-up-nav" class="navbar-brand" href="#">Sign Up</a>
+          <div class="ml-auto">
+              <a class="navbar-brand" href="listings.html">Listings</a>
+              <a id="log-in-nav" class="navbar-brand" href="#">Log In</a>
+              <a id="sign-up-nav" class="navbar-brand" href="#">Sign Up</a>
+          </div>
       </div>
-    </nav>
+  </nav>
     <div class="container mt-5">
         <div class="card border rounded">
           <div class="card-header bg-secondary text-white">
@@ -139,24 +145,5 @@
           &copy;Knirkefri Design
         </div>
       </footer>
-      <!-- <div class="modal fade" id="listing-modal" tabindex="-1" role="dialog" aria-labelledby="listingModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modal-title"></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p id="modal-tags"></p>
-              <img id="modal-media" src="" alt="Listing image" class="img-fluid">
-              <p id="modal-description"></p>
-              <p id="modal-sAt"></p>
-              <p id="modal-_bids"></p>
-            </div>
-          </div>
-        </div>
-      </div> -->
   </body>
 </html>
