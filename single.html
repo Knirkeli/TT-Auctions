@@ -18,11 +18,13 @@
     <script type="module" src="header/navitems.mjs"></script>
     <script type="module" src="profile/gold.mjs"></script>
     <script type="module" src="lander/fetchposts.mjs"></script>
-    <script type="module" src="lander/displaylatest.mjs"></script>
-    <script type="module" src="lander/endingsoon.mjs"></script>
+    <!-- <script type="module" src="lander/displaylatest.mjs"></script>
+    <script type="module" src="lander/endingsoon.mjs"></script> -->
     <script type="module" src="lander/countdown.mjs"></script>
     <script type="module" src="lander/search.mjs"></script>
+    <script type="module" src="mylistings/displayListing.mjs"></script>
     <script type="module" src="mylistings/single.mjs"></script>
+    <script type="module" src="Bids/postbid.mjs"></script>
     <title>TT-auctions-Home</title>
   </head>
   <body>    
@@ -73,16 +75,37 @@
     <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div class="card bg-primary" style="width: 800px; height: 800px;">
             <div class="card-header">
-                <h5 class="card-title" id="modal-title"></h5>
+                <h5 class="card-title d-flex flex-column justify-content-center align-items-center" id="modal-title"></h5>
             </div>
-            <div class="card-body">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center">
                 <p id="modal-tags" class="card-text"></p>
                 <img id="modal-media" src="" alt="Listing image" class="img-fluid card-img-top">
                 <p id="modal-description" class="card-text"></p>
                 <p id="modal-sAt" class="card-text"></p>
-                <p id="modal-_bids" class="card-text"></p>
+                <p id="modal-seller" class="card-text"></p> <!-- Added this line -->
+                <p id="modal-bids" class="card-text"></p>
+                <ul id="modal-bids-list"></ul> <!-- Added this line -->
             </div>
         </div>
+        <div class="card bg-primary mt-5" style="width: 800px;">
+            <div class="card-header">
+                <h5 class="card-title text-center">Place a Bid</h5>
+            </div>
+            <div class="card-body">
+                <form id="bid-form">
+                    <div class="form-group">
+                        <label for="bidder-name">Your Name</label>
+                        <input type="text" class="form-control" id="bidder-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bid-amount">Bid Amount</label>
+                        <input type="number" class="form-control" id="bid-amount" min="1" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Bid</button>
+                </form>
+            </div>
+        </div>
+    </div>
     </div>
     <footer class="footer bg-light p-3 mt-auto">
       <div class="container text-center">
