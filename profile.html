@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/style.css"/>
+    <link rel="stylesheet" href="profile/profile.css"/>
+
+    <link rel="stylesheet" href="header/header.css"/>
+    <link rel="stylesheet" href="signup/signup.css"/>
+    <script type="module" src="signup/modal.mjs"></script>
+    <script type="module" src="signup/signup.mjs"></script>
+    <script type="module" src="loginout/loginmodal.mjs"></script>
+    <script type="module" src="loginout/login.mjs"></script>
+    <script type="module" src="loginout/logout.mjs"></script>
+    <script type="module" src="loginout/logoutmodal.mjs"></script>
+    <script type="module" src="header/navitems.mjs"></script>
+    <script type="module" src="profile/profile.mjs"></script>
+    <script type="module" src="profile/profiledata.mjs"></script>
+    <script type="module" src="profile/avatar.mjs"></script>
+    <script type="module" src="profile/gold.mjs"></script>
+    <script type="module" src="mylistings/single.mjs"></script>
+    <script type="module" src="mylistings/displaylisting.mjs"></script>
+    <title>TT-auctions-Home</title>
+  </head>
+  <body class="d-flex flex-column">
+    <header class="d-flex flex-row justify-content-between align-items-end">
+      <div>
+        <a href="index.html" class="text-decoration-none text-body">
+          <h1 class="mb-4 mt-3 ml-4 fs-1">Tt-Auctions</h1>
+      </a>
+      <a href="index.html" class="text-decoration-none text-body">
+          <h2 class="mb-4 ml-5 fs-2">Roll the dice</h2>
+      </a>
+      </div>
+      <a href="profile.html" class="text-decoration-none text-body mb-2 mt-2 mr-1">
+        <div class="rotate ">
+        <div class="octagon">
+          <svg preserveAspectRatio="none" viewbox="0 0 100 100" width="115.2px">
+            <defs>
+                <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="https://i.pinimg.com/originals/e4/ae/05/e4ae053eaf232b4f90e23b38b43d7faf.jpg" x="0" y="0" width="100" height="100" preserveAspectRatio="none" />
+                </pattern>
+            </defs>
+            <path d="M25,2
+                     L75,2
+                     L98,25
+                     L98,75
+                     L75,98
+                     L25,98
+                     L2,75
+                     L2,25z" fill="url(#img1)" stroke-width="1" stroke="black"></path>
+        </svg>
+        </div>
+      </div>
+      </a>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid justify-content-between">
+          <div class="ml-auto">
+              <a class="navbar-brand" href="listings.html">Listings</a>
+              <a id="log-in-nav" class="navbar-brand" href="#">Log In</a>
+              <a id="sign-up-nav" class="navbar-brand" href="#">Sign Up</a>
+          </div>
+      </div>
+  </nav>
+    <div class="container mt-5">
+        <div class="card border rounded">
+          <div class="card-header text-center bg-transparent border-0">
+            Profile
+          </div>
+          <div class="card-body">
+            <div class="d-flex">
+                  <div class="text-decoration-none text-body mb-2 mt-2 mr-1">
+                  <div class="octagon">
+                    <svg preserveAspectRatio="none" viewbox="0 0 100 100" width="115.2px">
+                      <defs>
+                          <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
+                              <image xlink:href="https://i.pinimg.com/originals/e4/ae/05/e4ae053eaf232b4f90e23b38b43d7faf.jpg" x="0" y="0" width="100" height="100" preserveAspectRatio="none" />
+                          </pattern>
+                      </defs>
+                      <path d="M25,2
+                               L75,2
+                               L98,25
+                               L98,75
+                               L75,98
+                               L25,98
+                               L2,75
+                               L2,25z" fill="url(#img1)" stroke-width="1" stroke="black"></path>
+                  </svg>
+                  </div>
+                
+                <button id="avatar-button" class="btn btn-primary mb-3">
+                    New Disguise
+                </button>
+              </div>
+              <h5 class="card-title align-self-center ml-3">DM Dragonhoard</h5>
+            </div>
+            <div id="my-listings-container" class="container">
+            <h6>
+                My Listings
+            </h6>
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="Lander/img/Nemesis.jpg" alt="" class="img-thumbnail">
+                    <p>100g</p>                    
+                </div>
+
+                <div class="col-sm-4">
+                  <img src="Lander/img/Nemesis.jpg" alt="" class="img-thumbnail">
+                  <p>100g</p>                    
+              </div>
+              <div class="col-sm-4">
+                <img src="Lander/img/Nemesis.jpg" alt="" class="img-thumbnail">
+                <p>100g</p>                    
+            </div>
+            </div>
+          </div>
+          <div id="my-bids-container" class="container">
+            <h6>
+                My Bids
+            </h6>
+            <div class="row">
+              <div class="col-sm-4">
+                  <img src="Lander/img/Nemesis.jpg" alt="" class="img-thumbnail">
+                  <p>100g</p>                    
+              </div>
+              <div class="col-sm-4">
+                <img src="Lander/img/Nemesis.jpg" alt="" class="img-thumbnail">
+                <p>100g</p>                    
+              </div>
+              <div class="col-sm-4">
+              <img src="Lander/img/Nemesis.jpg" alt="" class="img-thumbnail">
+              <p>100g</p>                    
+              </div>
+          </div>
+        </div>
+            <div class="card-footer bg-secondary text-white">
+                <h4>
+                    Treasure Chest
+                </h4>
+                <img src="profile/img/gold.jpg" alt="" class="img-fluid rounded mb-3">
+                <p id="gold-count-profile">
+                    1000 Gold
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer bg-light p-3 mt-auto">
+        <div class="container text-center">
+          <div class="row d-flex align-items-center">
+            <div class="col-4 text-center d-flex justify-content-center align-items-center">
+              <div class="octagon d-flex justify-content-center align-items-center">
+                <svg preserveAspectRatio="none" viewbox="0 0 100 100" width="115.2px">
+                  <defs>
+                    <pattern id="img2" patternUnits="userSpaceOnUse" width="100" height="100">
+                      <image xlink:href="profile/img/gold.jpg" x="0" y="0" width="100" height="100" preserveAspectRatio="none" />
+                    </pattern>
+                  </defs>
+                  <path d="M25,2
+                           L75,2
+                           L98,25
+                           L98,75
+                           L75,98
+                           L25,98
+                           L2,75
+                           L2,25z" fill="url(#img2)" stroke-width="1" stroke="black"></path>
+                </svg>
+              </div>
+              <p id="gold-count">Gold</p>
+            </div>
+        </div>
+        <div class="col12 my-copy text-center mt-1">
+          &copy;Knirkefri Design
+        </div>
+      </footer>
+  </body>
+</html>

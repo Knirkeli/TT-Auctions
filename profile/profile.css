@@ -1,0 +1,11 @@
+.card-header.border-0 {
+    border: none;
+  }
+
+  h1, h2, h3, h4, h5, header, nav, p, label {
+    font-family: Algerian;
+  }
+  #avatar-img {
+    width: 150px;
+    height: auto;
+  }
