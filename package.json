@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "sass src/scss:dist/css --watch",
     "start": "live-server",
-    "dev": "npm-run-all --parallel watch start"
+    "dev": "npm-run-all --parallel watch start",
+    "build": "sass src/scss:dist/css"
   },
   "keywords": [],
   "author": "",
