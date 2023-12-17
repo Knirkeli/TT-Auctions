@@ -1,0 +1,33 @@
+.card-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(217, 217, 217, 0.7); /* Semi-transparent grey background */
+    border-radius: 9px 9px 0 0; /* Rounded corners on top */
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-family: algerian;
+}
+
+.listing-card {
+    width: 200px; /* Set the width */
+    height: 250px; /* Set the height */
+    object-fit: cover; /* Ensure that the content scales to fill the card while maintaining its aspect ratio */
+}
+.border-custom {
+    border-color: #C50202 !important; /* Add a border with the color #C50202 */
+}
+.no-border {
+    border: none !important; /* Remove the border */
+}
+
+.no-background {
+    background: none !important; /* Remove the background */
+}
+.listings-card {
+    width: 200px; /* Set the width */
+    height: 250px; /* Set the height */
+    object-fit: cover; /* Ensure that the content scales to fill the card while maintaining its aspect ratio */
+}
