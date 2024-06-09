@@ -1,5 +1,7 @@
 # TT-Auctions
 
+![Auction site](/img/TTHome.png)
+
 TT-Auctions is a semester project for Noroff. The goal of this project is to build a functional auction site.
 
 ## Project Overview
@@ -8,7 +10,7 @@ This project is built using HTML, CSS, JavaScript, and Bootstrap. It features a 
 
 ## Installation and Setup
 
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone <https://github.com/Knirkeli/TT-Auctions.git>`
 2. Navigate into the project directory: `cd TT-Auctions`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm start`
@@ -18,7 +20,6 @@ This project is built using HTML, CSS, JavaScript, and Bootstrap. It features a 
 - User registration and authentication
 - Item listing and bidding
 - Real-time updates on bidding status
-- And more...
 
 ## Technologies Used
 
@@ -33,3 +34,11 @@ This project is built with the following technologies:
 - live-server: A little development server with live reload capability
 
 More details about the project setup and build process can be found in the `package.json` file.
+
+## Contact
+
+- GitHub: https://github.com/Knirkeli
+- Email: knirkeli88@msn.com
+- Facebook: https://www.facebook.com/Knirkeli
+- Instagram: https://www.instagram.com/pappapaatur/
+- Website: https://knirkefridesign.netlify.app/
